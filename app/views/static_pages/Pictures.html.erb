@@ -1,0 +1,53 @@
+<!-- First Half before Page Break -->
+<div class="container">
+  <div class="row">
+    <a class="front">
+      <h5 class="white-text">
+        Dance Party
+      </h5>
+        <iframe class="col s12 m6" style="height:250px; width:400px;" src="//www.youtube.com/embed/5yYkp_m1uHs?wmode=opaque" frameborder="0" allowfullscreen></iframe>
+    </a>
+  <div class="col s12 m6">
+    <h5 class="white-text">
+      <strong>
+        Saturday Night College Dance Party
+      </strong>
+    </h5>
+      <p class="grey-text site-font debrief">
+        Watch this video to get a preview of what to expect at our Saturday Night Dance Parties! In order to receive updates on the most recent events with exclusive offers, sign up for the Toad's mailer (below). We will keep you up to date on all  dance parties and shows with e-mails that include special offers for our customer base!
+      </p>
+  </div>
+  </div>
+  <hr />
+
+
+<!-- Second Half after Page Break -->
+  <div class="row">
+    <div class="col s12 m6">
+      <h5 class="white-text">
+        <strong>
+          Reminders and Coupons!
+        </strong>
+      </h5>
+      <p class="grey-text site-font debrief">
+        To receive notices about upcoming dance parties, register your email to add to our mailer! We send out information about dance parties and shows coming up.
+      </p>
+    </div>
+    <!-- TODO -->
+    <!-- SUBSCRIBE USERS TO EMAIL LIST
+          SEND EMAILS TO USER VIEW PAGE -->
+    <div class="col s12 m6">
+        <%= form_for Email.new do |f| %>
+          <%= f.label :Register %>
+          <%= f.text_field :author %>
+
+          <%= f.submit "Submit", :class => "btn", :onclick => "alert('Email collected!')", :url => 'pictures_path' %>
+        <% end %>
+      </div>
+    </div>
+
+
+</div>
+</div>
+<br />
+<br />

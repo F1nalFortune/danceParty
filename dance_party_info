@@ -1,0 +1,14 @@
+if Users === 100, show other page
+
+require Date
+
+Date.
+require 'date'
+Date::DAYNAMES[Date.today.wday] == 'Friday'
+
+<% day = Date::DAYNAMES[Date.today.wday] %>
+<% if !['Friday', 'Saturday', 'Sunday'].include? day %>
+<form>
+</form>
+<% end %>
+

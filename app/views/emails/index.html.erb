@@ -1,0 +1,6 @@
+<h1> Emails </h1>
+<% @emails.each do |email| %>
+  <h2><%= email.author %></h2>
+  <%= link_to 'Show', email_path(email), :class => 'btn' %>
+  <%= link_to 'Destroy', email, method: :delete, :class => 'btn' %>
+<% end %>

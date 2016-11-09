@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DanceParty</title>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!--   <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react.js" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.14.0/react-dom.js" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js" /> -->
+</head>
+<body class="background">
+  <%= render 'layouts/navbar' %>
+  <div class="container">
+    <a href="/">
+      <%= image_tag("40_year.png", :alt => "40th Year") %>
+    </a>
+  </div>
+  <div id="site-nav" class="centerr">
+        <div class="row container">
+          <table>
+            <tbody>
+              <tr class='row'>
+                  <td class='col s4 m2 pad'>
+                    <%= link_to 'Party', static_pages_DanceParty_path, style: 'color:#ffffff; width: 100%;', class: 'btn buttonz waves-effect' %>
+                  </td>
+                  <td class='col s4 m2 pad'>
+                    <%= link_to 'Pictures', static_pages_Pictures_path, style: 'color:#ffffff; width: 100%;', class: 'btn buttonz waves-effect' %>
+                  </td>
+                  <td class='col s4 m2 pad'>
+                    <%= link_to 'Floors', static_pages_DanceFloors_path, style: 'color:#ffffff; width: 100%;', class: 'btn buttonz waves-effect' %>
+                  </td>
+                  <td class='col s4 m2 pad'>
+                    <%= link_to 'VIP', static_pages_GuestList_path, style: 'color:#ffffff; width: 100%;', class: 'btn buttonz waves-effect' %>
+                  </td>
+                  <td class='col s4 m2 pad'>
+                    <%= link_to 'Contact', static_pages_Contact_path, style: 'color:#ffffff; width: 100%;', class: 'btn buttonz waves-effect'  %>
+                  </td>
+                  <td class='col s4 m2 pad'>
+                    <%= link_to 'Directions', static_pages_Directions_path, style: 'color:#ffffff; width: 100%;', class: 'btn buttonz waves-effect' %>
+                  </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+<%= yield %>
+  <footer class="page-footer">
+          <div class="container centerr">
+              <div class="container">
+                <strong>
+                  <p class="gold">
+                    Dance parties will be hosted every Saturday night for college students!
+                  </p>
+                </strong>
+                <!-- FOOTER NAV-LINKS -->
+                  <div class="twelve row">
+                    <ul>
+                      <li>
+                        <%= link_to 'DANCE PARTY', static_pages_DanceParty_path,class: 'darkg text' %>
+                        <span class="white-text">
+                          |
+                        </span>
+                        <%= link_to 'GUEST LIST', static_pages_GuestList_path, class: 'darkg text' %>
+                        <span class="white-text">
+                          |
+                        </span>
+                        <%= link_to 'DANCE FLOORS', static_pages_DanceFloors_path, class: 'darkg text' %>
+                        <span class="white-text">
+                          |
+                        </span>
+                        <%= link_to 'PICTURES', static_pages_Pictures_path, class: 'darkg text' %>
+                        <span class="white-text">
+                          |
+                        </span>
+                        <%= link_to 'CONTACT', static_pages_Contact_path, class: 'darkg text'  %>
+                        <span class="white-text">
+                          |
+                        </span>
+                          <%= link_to 'DIRECTIONS', static_pages_Directions_path,class: 'darkg text' %>
+                      </li>
+                      <br />
+                        <!-- SOCIAL MEDIA ICONS -->
+                      <div class="row">
+                        <ul>
+                          <li class="font-style">
+                            <a href="http://www.facebook.com/toadsplaceofficial/" target="_blank">
+                              <i class="fa fa-facebook-square fa-3x"></i>
+                            </a>
+                            SOCIAL MEDIA
+                            <a href="https://twitter.com/toadsplace/" target="_blank">
+                              <i class="fa fa-twitter-square fa-3x"></i>
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
+                      <li>
+                        <strong>
+                          <a class="brightg" href="http://www.toadsplacemerch.com" target="_blank">
+                            Click Here To Buy Official Toad's Place Merchandise
+                          </a>
+                        </strong>
+                      </li>
+                      <br />
+                      <li class='white-text'>
+                        Toad's Place
+                      </li>
+                      <li class='white-text'>
+                        300 York St, New Haven, CT 06511
+                      </li>
+                      <li class='white-text'>
+                        203-624-8623
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+          <div class="footer-copyright">
+            <div class="container center">
+              <a class="white-text">
+                Copyright © 2016 Toad's Place, All Rights Reserved
+              </a>
+            </div>
+          </div>
+  </footer>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+</body>
+</html>

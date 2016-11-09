@@ -1,0 +1,10 @@
+<div class="row">
+  <h1> New Email </h1>
+  <%= form_for Email.new do |f| %>
+    <%= f.label :author %>
+    <%= f.text_field :author %>
+
+    <%= f.submit "Submit", :class => "btn", :onclick => "alert('Email collected!')" %>
+  <% end %>
+  <%= link_to 'Emails', emails_path %>
+</div>

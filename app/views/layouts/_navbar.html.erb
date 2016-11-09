@@ -1,0 +1,45 @@
+  <nav>
+    <div class="nav-wrapper">
+        <div class="row">
+          <ul id="nav-mobile" class="right">
+            <li>
+              <a href="http://www.toadsplace.com" class="font-style nav-text" target="_blank">
+                HOME SITE
+              </a>
+            </li>
+            <li>
+              <a href="http://www.toadsplacemerch.com" class="font-style nav-text" target="_blank">
+                MERCH
+              </a>
+            </li>
+            <li>
+              <% if user_signed_in? === true %>
+                <%= link_to 'LOGOUT', destroy_user_session_path, method: :delete, :class =>"font-style nav-text" %>
+              <% else user_signed_in? === false %>
+                <%= link_to 'ADMIN', new_user_session_path, :class =>"font-style nav-text" %>
+              <% end %>
+            </li>
+<!--             <li>
+              <a href="http://www.facebook.com/toadsplaceofficial/">
+                Facebook
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/toadsplace/">
+                Twitter
+              </a>
+            </li> -->
+<!--             <li>
+              <a href="http://www.facebook.com/toadsplaceofficial/">
+                <i class="fa fa-facebook fa-lg"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/toadsplace/">
+                <i class="fa fa-twitter fa-lg"></i>
+              </a>
+            </li> -->
+          </ul>
+        </div>
+    </div>
+  </nav>

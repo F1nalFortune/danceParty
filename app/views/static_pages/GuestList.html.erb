@@ -1,0 +1,24 @@
+<h5 class="centerr">
+  <strong>
+    VIP / Guest List Sign-up
+  </strong>
+</h5>
+  <p class="white-text padding">
+    The following form is for Guest List admittance for Saturday Night Dance
+    parties. The guest list opens at 3:00 AM on Sunday morning and is open to
+    the first 100  people that sign up or by Saturdays at noon. Getting to the
+    club by 11:00PM is mandatory for VIP access ( skip the line ).
+    Additionally, all guests in your party must have a State issued ID,
+    passport, or valid military license. This guest list doesn't give free
+    admission, it just allows you to skip the line.
+  </p>
+<!-- TODO -->
+<!-- MAKE AJAX CALL PUSH TO USER VIEWABLE PAGE -->
+<div class="container">
+  <% day = Date::DAYNAMES[Date.today.wday] %>
+  <% if !['Saturday'].include? day %>
+    <%= react_component('GuestList', vipusers:@vipusers) %>
+  <% else %>
+    <h1> Come back next Sunday! </h1>
+  <% end %>
+</div>
