@@ -2,6 +2,10 @@ class VipUsersController < ApplicationController
   require 'date'
   Date::DAYNAMES[Date.today.wday] == 'Sunday'
 
+  def middle_of_day
+    change(:hour => 12)
+  end
+
   def index
     render json: VipUser.all.order(:created_at)
   end
