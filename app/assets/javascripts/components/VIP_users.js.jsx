@@ -1,5 +1,7 @@
 // REFACTOR TO ES6
 // REFERENCE TWITTER_DEMO
+// TODO
+
 var VIP_user = React.createClass({
   getInitialState: function() {
     return { edit: false };
