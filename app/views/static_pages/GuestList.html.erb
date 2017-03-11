@@ -14,11 +14,18 @@
   </p>
 <!-- TODO -->
 <!-- MAKE AJAX CALL PUSH TO USER VIEWABLE PAGE -->
+<!-- MAKE PAGE TO PUSH USERS TO WEEKLY GUEST LIST  -->
+<!-- SHUT DOWN GUEST LIST AFTER 150 PEOPLE -->
+
+
+<!-- VIP.count = [150] -->
+<!--  -->
 <div class="container">
   <% day = Date::DAYNAMES[Date.today.wday] %>
   <% if !['Saturday'].include? day %>
     <%= react_component('GuestList', vipusers:@vipusers) %>
   <% else %>
     <h1> Come back next Sunday! </h1>
+  <!-- <% elsif VIP.count > 149 %> -->
   <% end %>
 </div>
